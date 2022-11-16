@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# this is supposed to be run at repo root
+
+cmd=$0
+SID=$1
+
+if [[ $cmd != "./test/run" ]]; then
+    echo Usage: ./test/run \<student id\>
+    exit
+fi
+
+if [[ $SID = "" ]]; then
+    echo Usage: ./test/run \<student id\>
+    exit
+fi
+
+echo "SID: $SID"
+echo ""
+echo "--- Q1-1 ---"
+echo ""
+
+for i in {0..9}; do
+    echo -n "Case #$i: "
+    ./build/Q1\-1 < test/Q1\-1/$i.in
+    ./build/Q1\-1\-judge $SID < test/Q1\-1/$i.in
+done
+
+rm q1-1_*
+
+echo ""
+echo "--- Q1-2 ---"
+echo ""
+
+current_path=$(pwd)
+for i in {0..4}; do
+    echo -n "Case #$i: "
+    cd test/Q1\-2/case_$i
+    
+    $current_path/build/Q1\-2
+    $current_path/build/Q1\-2-judge $SID < $i.in
+
+    rm q1\-2_ctx_result
+
+    cd $current_path
+done

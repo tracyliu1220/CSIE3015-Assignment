@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# this is supposed to be run at repo root
+
+current_path=$(pwd)
+
+for i in {0..4}; do
+    mkdir -p test/Q1\-2/case_$i
+    cd test/Q1\-2/case_$i
+    python3 ../gen.py > $i.in
+    $current_path/build/Q1\-2-gen < $i.in
+    cd $current_path
+done
