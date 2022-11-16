@@ -1,30 +1,19 @@
-# CSIE5437 Assignment 4 Sample Code
+# CSIE3015 Assignment Sample Code
 
 ## Installation
 
-[Install OpenFHE in a system directory](https://openfhe-development.readthedocs.io/en/latest/sphinx_rsts/intro/installation/linux.html)
+Please follow [the instructions](https://openfhe-development.readthedocs.io/en/latest/sphinx_rsts/intro/installation/linux.html) to install OpenFHE in a system directory.
 
-First clone the [OpenFHE repo](https://github.com/openfheorg/openfhe-development).
+Or, execute the following commands.
 
-Then run the following commands.
 ```
+git clone https://github.com/openfheorg/openfhe-development
 cd openfhe-development
-
 mkdir build
 cd build
 cmake ..
-
 make -j4
 sudo make install
-```
-
-## Download data
-
-Download the `data.zip` file from [here](https://drive.google.com/file/d/1ycj_c1rSHvi3TVtSX_y_pdnno_TeWlfv/view?usp=sharing).
-
-```
-cd build
-unzip data.zip
 ```
 
 ## Build
@@ -35,19 +24,18 @@ cd build
 cmake ..
 ```
 
-Compile and generate executable. (under directory `build`)
+Compile and generate executables. (under directory `build`)
 ```
 make
 ```
 
-## Run
+## Test
 
-Run the executable. (under directory `build`)
+Run local tests. (under root directory)
 ```
-./main
+./test/run <student id>
 ```
 
 ## Contact
 
-Please feel free to contact me through tracyliu981220@gmail.com if you have any questions.
-# CSIE3015-Assignment
+Please feel free to contact the TA through tracyliu981220@gmail.com if you have any questions.
