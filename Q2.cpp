@@ -72,6 +72,6 @@ int main() {
   }
 
   cout << "time: " << end_time - start_time << " secs" << endl;
-  cout << "average error: " << error / 1024 << " = 2 ^ "
-       << (int)log2(error / 1024) << endl;
+  cout << "average error: " << error / n << " = 2 ^ "
+       << (int)log2(error / n) << endl;
 }
