@@ -9,7 +9,7 @@
 using namespace lbcrypto;
 using namespace std;
 
-// TODO: set SID as last 3 digits of your student id without tilling zeros
+// TODO: set SID as last 3 digits of your student id without leading zeros
 const double SID = 92;
 
 int main() {
