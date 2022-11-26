@@ -9,7 +9,7 @@
 using namespace lbcrypto;
 using namespace std;
 
-uint32_t multDepth = 1;
+uint32_t multDepth = 2;
 uint32_t scaleModSize = 50;
 uint32_t batchSize = 256;
 
